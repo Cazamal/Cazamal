@@ -16,5 +16,6 @@ namespace Xadrez_console.tabuleiro
             Cor = cor;
             Tab = tab;
         }
+
     }
 }
