@@ -1,5 +1,5 @@
 ﻿
-namespace Xadrez_console.tabuleiro
+namespace tabuleiro
 {
     class Peca
     {
@@ -8,14 +8,16 @@ namespace Xadrez_console.tabuleiro
         public int QteMovimentos { get; protected set; }
         public Tabuleiro Tab { get; protected set; }
 
-        public Peca() { }
+        public Peca(Tabuleiro tab,Cor cor) { }
 
-        public Peca(Posicao posicao, Cor cor, Tabuleiro tab)
+        public Peca(Cor cor, Tabuleiro tab)
         {
-            Posicao = posicao;
+            Posicao = null;
             Cor = cor;
             Tab = tab;
+            QteMovimentos = 0;
         }
 
+       
     }
 }

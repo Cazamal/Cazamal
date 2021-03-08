@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Xadrez_console.tabuleiro
+namespace tabuleiro
 {
     class Tabuleiro
     {
@@ -14,12 +14,17 @@ namespace Xadrez_console.tabuleiro
         {
             Linhas = linhas;
             Colunas = colunas;
-            Pecas = new Peca[Linhas,Colunas];
+            Pecas = new Peca[Linhas, Colunas];
         }
 
         public Peca peca(int linha, int coluna)
         {
             return Pecas[linha, coluna];
+        }
+        public void colocarPeca(Peca p, Posicao pos)
+        {
+            Pecas[pos.Linha, pos.Coluna] = p;
+            p.Posicao = pos;
         }
 
     }
